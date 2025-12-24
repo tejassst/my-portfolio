@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Cinzel, IBM_Plex_Sans } from 'next/font/google';
 import './globals.css';
+import PageTransition from '@/components/pageTransition';
+import Ashes from '@/components/ashes';
 
 const cinzel = Cinzel({
   weight: ['400', '500', '600', '700', '800', '900'],
@@ -31,8 +33,12 @@ export default function RootLayout({
       lang="en"
       className={`bg-[#0f1115] ${cinzel.variable} ${ibmPlexSans.variable}`}
     >
-      <body className={`${ibmPlexSans.className} bg-[#0f1115]`}>
-        {children}
+      <body
+        className={`${ibmPlexSans.className} bg-[#0f1115]`}
+        suppressHydrationWarning
+      >
+        <Ashes />
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
