@@ -647,7 +647,7 @@ export const ThroneRoom: React.FC = () => {
           >
             <h1 style={
                { color: '#FFC901',
-                 fontSize: 'clamp(1.6rem, 6.4vw, 54px)',
+                 fontSize: 'clamp(2rem, 7.6vw, 66px)',
                  fontFamily: 'UnifrakturCook',
                  lineHeight: 1.05,
                  margin: 0,
@@ -656,8 +656,8 @@ export const ThroneRoom: React.FC = () => {
             <p style={
               {
                 fontFamily: 'Pirata One',
-                fontSize: 'clamp(0.85rem, 3vw, 23px)',
-                lineHeight: 1.35,
+                fontSize: 'clamp(1rem, 3.5vw, 29px)',
+                lineHeight: 1.3,
                 margin: 0,
               }
             }>
