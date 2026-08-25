@@ -638,20 +638,27 @@ export const ThroneRoom: React.FC = () => {
             justifyContent: 'center',
             alignItems: 'center',
             textAlign: 'center',
-            padding: '0 4vw',
+            gap: '2%',
+            /* Percentage padding tracks the board's painted inner panel at every
+               size, so the text can't leak past the frame. */
+            padding: '9% 12%',
             boxSizing: 'border-box',
             }}
           >
             <h1 style={
                { color: '#FFC901',
-                 fontSize: 'clamp(2rem, 8vw, 70px)',
+                 fontSize: 'clamp(1.6rem, 6.4vw, 54px)',
                  fontFamily: 'UnifrakturCook',
-                 padding: '10px'
+                 lineHeight: 1.05,
+                 margin: 0,
+                 padding: 0,
                }}>Welcome, Traveler</h1>
             <p style={
               {
                 fontFamily: 'Pirata One',
-                fontSize: 'clamp(1rem, 3.6vw, 30px)'
+                fontSize: 'clamp(0.85rem, 3vw, 23px)',
+                lineHeight: 1.35,
+                margin: 0,
               }
             }>
               You have found the throne. <br /> 
