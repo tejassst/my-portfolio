@@ -709,7 +709,7 @@ export const ThroneRoom: React.FC = () => {
 
               <a
                 className="footer-social"
-                href="#"
+                href="https://linkedin.com/in/tejas-tyagi-1281a5223"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
