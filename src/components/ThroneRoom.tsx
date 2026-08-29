@@ -631,8 +631,11 @@ export const ThroneRoom: React.FC = () => {
             backgroundSize: '100% 100%',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            width: 'min(92vw, 800px)',
-            aspectRatio: '4 / 3',
+            width: 'min(92vw, 760px)',
+            /* No fixed aspect ratio: the board stretches to hug its text (backgroundSize
+               100% 100% makes the frame image follow), so it stays wide without the copy
+               overflowing into a tall box. minHeight keeps it from collapsing when short. */
+            minHeight: '280px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -641,13 +644,13 @@ export const ThroneRoom: React.FC = () => {
             gap: '2%',
             /* Percentage padding tracks the board's painted inner panel at every
                size, so the text can't leak past the frame. */
-            padding: '9% 12%',
+            padding: '6% 7%',
             boxSizing: 'border-box',
             }}
           >
             <h1 style={
                { color: '#FFC901',
-                 fontSize: 'clamp(2rem, 7.6vw, 66px)',
+                 fontSize: 'clamp(1.6rem, 6vw, 50px)',
                  fontFamily: 'UnifrakturCook',
                  lineHeight: 1.05,
                  margin: 0,
@@ -656,9 +659,10 @@ export const ThroneRoom: React.FC = () => {
             <p style={
               {
                 fontFamily: 'Pirata One',
-                fontSize: 'clamp(1rem, 3.5vw, 29px)',
+                fontSize: 'clamp(0.85rem, 2.6vw, 22px)',
                 lineHeight: 1.3,
                 margin: 0,
+                marginTop: '10px',
               }
             }>
               You have found the throne. <br /> 
@@ -891,7 +895,6 @@ export const ThroneRoom: React.FC = () => {
         className={`realm-loader${loading ? '' : ' realm-loader--gone'}`}
         aria-hidden={!loading}
       >
-        <div className="realm-loader-crest">Tejas Tyagi</div>
         <div className="realm-loader-sub">Unsealing the hall…</div>
         <div className="realm-loader-bar">
           <span />
