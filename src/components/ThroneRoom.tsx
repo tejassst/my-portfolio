@@ -59,7 +59,7 @@ I'm always looking to learn, build, and work on interesting problems. Let's conn
     tagline: 'Smart Breathing Device (Hardware + Mobile + Backend)',
     description: `A handheld smart breathing device that helps people manage stress and replace habits like smoking through guided rhythmic breathing, haptic feedback, and real-time biometric sensing. I designed and built the full system end to end: firmware, mobile app, and backend.`,
     highlights: [
-      'ESP32 firmware in C++ reads an air-pressure sensor and a MAX30102 pulse-oximeter to detect inhale and exhale plus heart-rate variability.',
+      'ESP32 firmware in C++ reads an air-pressure sensor and a pulse-oximeter sensor to detect inhale and exhale plus heart-rate variability.',
       'Drives a haptic motor for breathing rhythm guidance and streams live session data over Bluetooth Low Energy.',
       'React Native (Expo) app pairs over BLE with Firebase auth, secure on-device storage, and animated Rive breathing UIs.',
       'FastAPI backend with SQLAlchemy and PostgreSQL persists sessions and powers personalized recommendations.',
